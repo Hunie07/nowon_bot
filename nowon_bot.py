@@ -1,4 +1,3 @@
-#import os
 import re
 import openai
 import datetime
@@ -304,7 +303,7 @@ def main_page():
         st.link_button(":red[유튜브]", "https://www.youtube.com/channel/UCJY_vHq3n_DkHcdc3g01RGQ", use_container_width=True)
 
 st.set_page_config(
-    page_title="노원톡_test",
+    page_title="노원톡",
     page_icon="🏤",
     layout="wide"
 )
