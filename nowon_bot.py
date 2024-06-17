@@ -34,6 +34,8 @@ def get_hot_issue():
         
             if 'www.nowon.kr' not in issue_img:
                 issue_img = 'https://www.nowon.kr' + issue_img
+            if 'https:' in issue_link:
+                issue_link = issue_link
             if 'www.nowon.kr' not in issue_link:
                 issue_link = 'https://www.nowon.kr' + issue_link
             issue_list.append({"title": issue_title, "img": issue_img, "link": issue_link})
