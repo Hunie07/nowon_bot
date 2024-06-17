@@ -33,13 +33,8 @@ def get_hot_issue():
             issue_link = issue.find("a").attrs['href']
             if 'www.nowon.kr' not in issue_img:
                 issue_img = 'https://www.nowon.kr' + issue_img
-            response = requests.get(issue_link, headers=headers)
-            response.encoding = "utf-8"
-            if response.status_code != 200:
-                if 'www.nowon.kr' not in issue_link:
-                    issue_link = 'https://www.nowon.kr' + issue_link
-            if response.status_code == 200:
-                issue_link = issue_link
+            if 'www.nowon.kr' not in issue_link:
+                issue_link = 'https://www.nowon.kr' + issue_link
             issue_list.append({"title": issue_title, "img": issue_img, "link": issue_link})
     return issue_list
 
