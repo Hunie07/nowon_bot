@@ -32,8 +32,6 @@ def get_hot_issue():
             issue_title = issue.find("img").attrs['alt']
             issue_link = issue.find("a").attrs['href']
 
-            if 'https:' in issue_link:
-                issue_link = issue_link
             if 'www.nowon.kr' not in issue_img:
                 issue_img = 'https://www.nowon.kr' + issue_img
             if 'www.nowon.kr' not in issue_link:
